@@ -6,36 +6,48 @@ namespace Assignment4BMI
 {
     public partial class BMICalculator : Form
     {
-        private int _weight;
-        private int _height;
-        private int _bmi;
+        private double _weight;
+        private double _height;
+   
 
-        public int UserWeight
+        public double UserWeight
         {
             get { return _weight; }
             set
             {
-                _weight = value;
-                if (value<1)
+                
+                if (value <0)
                 {
-                    MessageBox.Show("Weight can not be less then 1");
+                    
+                    MessageBox.Show("Please Enter a number other than the negative number.");
+                    
+                }
+                else
+                {
+                   _weight = value;
                 }
             }
         }
 
-        public int UserHeight
+        public double UserHeight
         {
             get { return _height; }
             set
             {
-                _weight = value;
-                if (value < 1)
+               
+                if (value< 0)
                 {
-                    MessageBox.Show("Height can not be less then 1");
+
+                    MessageBox.Show("Please Enter a number other than the negative number.");
+
+                }
+                else
+                {
+                     _height = value;
                 }
             }
         }
-        public int BMI { get; set; }
+        public double BMI { get; set; }
 
 
         public BMICalculator()
@@ -46,12 +58,12 @@ namespace Assignment4BMI
 //            BMI = _bmi;
         }
 
-        public int BMICalculatorMetric(int weight, int height)
+        public double BMICalculatorMetric(double weight, double height)
         {
             BMI = weight / (height * height);
             return BMI;
         }
-        public int BMICalculatorImperial(int weight, int height)
+        public double BMICalculatorImperial(double weight, double height)
         {
             BMI = weight * 703 / (height * height);
             return BMI;
@@ -63,7 +75,7 @@ namespace Assignment4BMI
             txtWeight.Clear();
 //            rdBtnImperial.Checked = false;
 //            rdBtnMetric.Checked = false;
-            txtResult.Clear();
+           // txtResult.Clear();
             txtWeight.Focus();
 
         }
@@ -79,7 +91,7 @@ namespace Assignment4BMI
         {
             if (rdBtnMetric.Checked)
             {
-                lblHeightUnit.Text = "cm";
+                lblHeightUnit.Text = "m";
                 lblWeightUnit.Text = "kg";
 
             }
@@ -103,12 +115,16 @@ namespace Assignment4BMI
             if (rdBtnImperial.Checked)
             {
 
-                txtResult.Text = Convert.ToString(BMICalculatorImperial(UserWeight, Height));
+              BMI=BMICalculatorImperial(UserWeight, UserHeight);
+             // BMI = UserWeight * 703 / (UserHeight * UserHeight);
+              txtResult.Text = Convert.ToString($"{BMI:F2}");
             }
 
             if (rdBtnMetric.Checked)
             {
-                txtResult.Text = Convert.ToString(BMICalculatorMetric(UserWeight, Height));
+                BMI = BMICalculatorMetric(UserWeight, UserHeight);
+               // BMI = UserWeight  / (UserHeight * UserHeight);
+                txtResult.Text = Convert.ToString($"{BMI:F2}");
             }
             Clean();
 
@@ -118,7 +134,7 @@ namespace Assignment4BMI
         {
             try
             {
-                UserWeight = int.Parse(txtWeight.Text);
+                UserWeight = double.Parse(txtWeight.Text);
                
                 
 
@@ -137,7 +153,7 @@ namespace Assignment4BMI
             try
             {
 
-                UserHeight = int.Parse(txtHeight.Text);
+                UserHeight = double.Parse(txtHeight.Text);
                 if (txtWeight.Text.Length>1)
                 {
                     BtnCalculateBMI.Enabled = true;
