@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculator));
             this.lblHeight = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
-            this.BtnCalculateBMI = new System.Windows.Forms.Button();
             this.lblHeightUnit = new System.Windows.Forms.Label();
             this.lblWeightUnit = new System.Windows.Forms.Label();
             this.txtWeight = new System.Windows.Forms.TextBox();
@@ -40,15 +39,22 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblResultList = new System.Windows.Forms.Label();
             this.txtResult = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.rdBtnMetric = new System.Windows.Forms.RadioButton();
             this.rdBtnImperial = new System.Windows.Forms.RadioButton();
             this.txtHeight = new System.Windows.Forms.TextBox();
+            this.txtUnderWeight = new System.Windows.Forms.TextBox();
+            this.txtNormalWeight = new System.Windows.Forms.TextBox();
+            this.TxtOwerWeight = new System.Windows.Forms.TextBox();
+            this.txtObese = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.BtnCalculateBMI = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHeight
@@ -81,19 +87,6 @@
             this.lblWeight.Text = "My Weight:";
             this.lblWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // BtnCalculateBMI
-            // 
-            this.BtnCalculateBMI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.BtnCalculateBMI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnCalculateBMI.Font = new System.Drawing.Font("Corbel", 16F);
-            this.BtnCalculateBMI.Location = new System.Drawing.Point(3, 188);
-            this.BtnCalculateBMI.Name = "BtnCalculateBMI";
-            this.BtnCalculateBMI.Size = new System.Drawing.Size(305, 36);
-            this.BtnCalculateBMI.TabIndex = 5;
-            this.BtnCalculateBMI.Text = "Calculate";
-            this.BtnCalculateBMI.UseVisualStyleBackColor = false;
-            this.BtnCalculateBMI.Click += new System.EventHandler(this.BtnCalculateBMI_Click);
-            // 
             // lblHeightUnit
             // 
             this.lblHeightUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -103,7 +96,7 @@
             this.lblHeightUnit.Font = new System.Drawing.Font("Corbel", 14F);
             this.lblHeightUnit.Location = new System.Drawing.Point(257, 71);
             this.lblHeightUnit.Name = "lblHeightUnit";
-            this.lblHeightUnit.Size = new System.Drawing.Size(45, 35);
+            this.lblHeightUnit.Size = new System.Drawing.Size(48, 35);
             this.lblHeightUnit.TabIndex = 5;
             this.lblHeightUnit.Text = "--";
             this.lblHeightUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,7 +110,7 @@
             this.lblWeightUnit.Font = new System.Drawing.Font("Corbel", 14F);
             this.lblWeightUnit.Location = new System.Drawing.Point(257, 33);
             this.lblWeightUnit.Name = "lblWeightUnit";
-            this.lblWeightUnit.Size = new System.Drawing.Size(45, 38);
+            this.lblWeightUnit.Size = new System.Drawing.Size(48, 38);
             this.lblWeightUnit.TabIndex = 5;
             this.lblWeightUnit.Text = "--";
             this.lblWeightUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,14 +134,14 @@
             this.panelTitle.Controls.Add(this.lblTitle);
             this.panelTitle.Location = new System.Drawing.Point(3, 3);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(305, 67);
+            this.panelTitle.Size = new System.Drawing.Size(306, 67);
             this.panelTitle.TabIndex = 9;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(167, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(168, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(138, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -162,7 +155,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("GRACETIANS Cutting", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(-5, 17);
+            this.lblTitle.Location = new System.Drawing.Point(-5, 18);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(173, 27);
             this.lblTitle.TabIndex = 0;
@@ -175,9 +168,9 @@
             this.lblResultList.Font = new System.Drawing.Font("Corbel", 16F);
             this.lblResultList.Location = new System.Drawing.Point(3, 271);
             this.lblResultList.Name = "lblResultList";
-            this.lblResultList.Size = new System.Drawing.Size(305, 27);
+            this.lblResultList.Size = new System.Drawing.Size(307, 27);
             this.lblResultList.TabIndex = 7;
-            this.lblResultList.Text = "Previous Results:";
+            this.lblResultList.Text = "Level Indicator ";
             this.lblResultList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtResult
@@ -187,54 +180,8 @@
             this.txtResult.Enabled = false;
             this.txtResult.Location = new System.Drawing.Point(3, 230);
             this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(305, 38);
+            this.txtResult.Size = new System.Drawing.Size(307, 38);
             this.txtResult.TabIndex = 9;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.Controls.Add(this.BtnCalculateBMI, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblResultList, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.txtResult, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.panelTitle, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 6;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 427);
-            this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.ColumnCount = 3;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tableLayoutPanel2.Controls.Add(this.rdBtnMetric, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblHeightUnit, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.rdBtnImperial, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lblHeight, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txtWeight, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblWeight, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lblWeightUnit, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.txtHeight, 1, 2);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 76);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(305, 106);
-            this.tableLayoutPanel2.TabIndex = 10;
             // 
             // rdBtnMetric
             // 
@@ -280,6 +227,142 @@
             this.txtHeight.TabIndex = 6;
             this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
+            // txtUnderWeight
+            // 
+            this.txtUnderWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUnderWeight.Enabled = false;
+            this.txtUnderWeight.Font = new System.Drawing.Font("Corbel", 14F);
+            this.txtUnderWeight.Location = new System.Drawing.Point(3, 3);
+            this.txtUnderWeight.Name = "txtUnderWeight";
+            this.txtUnderWeight.Size = new System.Drawing.Size(292, 30);
+            this.txtUnderWeight.TabIndex = 0;
+            this.txtUnderWeight.Text = "Under Weight Increased Risk";
+            this.txtUnderWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtNormalWeight
+            // 
+            this.txtNormalWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNormalWeight.Enabled = false;
+            this.txtNormalWeight.Font = new System.Drawing.Font("Corbel", 14F);
+            this.txtNormalWeight.Location = new System.Drawing.Point(3, 34);
+            this.txtNormalWeight.Name = "txtNormalWeight";
+            this.txtNormalWeight.Size = new System.Drawing.Size(292, 30);
+            this.txtNormalWeight.TabIndex = 0;
+            this.txtNormalWeight.Text = "Normal Weight Least Risk";
+            this.txtNormalWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // TxtOwerWeight
+            // 
+            this.TxtOwerWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtOwerWeight.Enabled = false;
+            this.TxtOwerWeight.Font = new System.Drawing.Font("Corbel", 14F);
+            this.TxtOwerWeight.Location = new System.Drawing.Point(3, 65);
+            this.TxtOwerWeight.Name = "TxtOwerWeight";
+            this.TxtOwerWeight.Size = new System.Drawing.Size(292, 30);
+            this.TxtOwerWeight.TabIndex = 0;
+            this.TxtOwerWeight.Text = "Over Weight Increased Risk";
+            this.TxtOwerWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtObese
+            // 
+            this.txtObese.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtObese.Enabled = false;
+            this.txtObese.Font = new System.Drawing.Font("Corbel", 14F);
+            this.txtObese.Location = new System.Drawing.Point(3, 95);
+            this.txtObese.Name = "txtObese";
+            this.txtObese.Size = new System.Drawing.Size(292, 30);
+            this.txtObese.TabIndex = 0;
+            this.txtObese.Text = "Obesee High Risk";
+            this.txtObese.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.BtnCalculateBMI, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblResultList, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtResult, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panelTitle, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 5);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 1);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(301, 427);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
+            this.tableLayoutPanel2.Controls.Add(this.rdBtnMetric, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblHeightUnit, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.rdBtnImperial, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblHeight, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtWeight, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblWeight, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblWeightUnit, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtHeight, 1, 2);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 76);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(307, 106);
+            this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.txtUnderWeight, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.txtNormalWeight, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.TxtOwerWeight, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.txtObese, 0, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 301);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 4;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 32F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(298, 125);
+            this.tableLayoutPanel3.TabIndex = 11;
+            // 
+            // BtnCalculateBMI
+            // 
+            this.BtnCalculateBMI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
+            this.BtnCalculateBMI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnCalculateBMI.Font = new System.Drawing.Font("Corbel", 16F);
+            this.BtnCalculateBMI.Location = new System.Drawing.Point(3, 188);
+            this.BtnCalculateBMI.Name = "BtnCalculateBMI";
+            this.BtnCalculateBMI.Size = new System.Drawing.Size(307, 36);
+            this.BtnCalculateBMI.TabIndex = 5;
+            this.BtnCalculateBMI.Text = "Calculate";
+            this.BtnCalculateBMI.UseVisualStyleBackColor = false;
+            this.BtnCalculateBMI.Click += new System.EventHandler(this.BtnCalculateBMI_Click);
+            // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -291,7 +374,7 @@
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(7, 8, 7, 8);
+            this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MaximizeBox = false;
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -304,6 +387,8 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -311,7 +396,6 @@
         #endregion
         private System.Windows.Forms.Label lblHeight;
         private System.Windows.Forms.Label lblWeight;
-        private System.Windows.Forms.Button BtnCalculateBMI;
         private System.Windows.Forms.Label lblHeightUnit;
         private System.Windows.Forms.Label lblWeightUnit;
         private System.Windows.Forms.TextBox txtWeight;
@@ -320,11 +404,17 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblResultList;
         private System.Windows.Forms.TextBox txtResult;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.RadioButton rdBtnMetric;
         private System.Windows.Forms.RadioButton rdBtnImperial;
         private System.Windows.Forms.TextBox txtHeight;
+        private System.Windows.Forms.TextBox txtUnderWeight;
+        private System.Windows.Forms.TextBox txtNormalWeight;
+        private System.Windows.Forms.TextBox TxtOwerWeight;
+        private System.Windows.Forms.TextBox txtObese;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button BtnCalculateBMI;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
     }
 }
 

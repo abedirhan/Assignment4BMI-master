@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
@@ -8,23 +9,23 @@ namespace Assignment4BMI
     {
         private double _weight;
         private double _height;
-   
+
 
         public double UserWeight
         {
             get { return _weight; }
             set
             {
-                
-                if (value <0)
+
+                if (value < 0)
                 {
-                    
+
                     MessageBox.Show("Please Enter a number other than the negative number.");
-                    
+
                 }
                 else
                 {
-                   _weight = value;
+                    _weight = value;
                 }
             }
         }
@@ -34,8 +35,8 @@ namespace Assignment4BMI
             get { return _height; }
             set
             {
-               
-                if (value< 0)
+
+                if (value < 0)
                 {
 
                     MessageBox.Show("Please Enter a number other than the negative number.");
@@ -43,7 +44,7 @@ namespace Assignment4BMI
                 }
                 else
                 {
-                     _height = value;
+                    _height = value;
                 }
             }
         }
@@ -53,9 +54,9 @@ namespace Assignment4BMI
         public BMICalculator()
         {
             InitializeComponent();
-//            UserWeight = _weight;
-//            UserHeight = _height;
-//            BMI = _bmi;
+            //            UserWeight = _weight;
+            //            UserHeight = _height;
+            //            BMI = _bmi;
         }
 
         public double BMICalculatorMetric(double weight, double height)
@@ -73,9 +74,10 @@ namespace Assignment4BMI
         {
             txtHeight.Clear();
             txtWeight.Clear();
-//            rdBtnImperial.Checked = false;
-//            rdBtnMetric.Checked = false;
-           // txtResult.Clear();
+            //            rdBtnImperial.Checked = false;
+            //            rdBtnMetric.Checked = false;
+            // txtResult.Clear();
+           
             txtWeight.Focus();
 
         }
@@ -115,28 +117,67 @@ namespace Assignment4BMI
             if (rdBtnImperial.Checked)
             {
 
-              BMI=BMICalculatorImperial(UserWeight, UserHeight);
-             // BMI = UserWeight * 703 / (UserHeight * UserHeight);
-              txtResult.Text = Convert.ToString($"{BMI:F2}");
+                BMI = BMICalculatorImperial(UserWeight, UserHeight);
+                // BMI = UserWeight * 703 / (UserHeight * UserHeight);
+                txtResult.Text = Convert.ToString($"{BMI:F2}");
             }
 
             if (rdBtnMetric.Checked)
             {
                 BMI = BMICalculatorMetric(UserWeight, UserHeight);
-               // BMI = UserWeight  / (UserHeight * UserHeight);
+                // BMI = UserWeight  / (UserHeight * UserHeight);
                 txtResult.Text = Convert.ToString($"{BMI:F2}");
             }
+
+
+
+            if (BMI < 18.5)
+            {
+                txtUnderWeight.BackColor = Color.Crimson;
+                txtHeight.ForeColor = Color.White;
+                // txtHeight.Font= FontStyle.Bold;
+            }
+            else if (BMI > 18.5 && BMI < 24.9)
+            {
+                txtNormalWeight.BackColor = Color.LimeGreen;
+                txtNormalWeight.ForeColor = Color.White;
+
+            }
+            else if (BMI > 25 && BMI < 29.9)
+            {
+                TxtOwerWeight.BackColor = Color.Tomato;
+                TxtOwerWeight.ForeColor = Color.White;
+
+            }
+            else if (BMI > 30 && BMI < 34.9)
+            {
+                txtObese.Enabled = true;
+                txtObese.BackColor = Color.Crimson;
+                txtObese.ForeColor = Color.White;
+
+            }
+//            else if (BMI > 35)
+//            {
+//                txtNormalWeight.BackColor = Color.DarkRed;
+//                txtNormalWeight.ForeColor = Color.White;
+//
+//            }
+
+
+
+
             Clean();
 
         }
 
         private void txtWeight_TextChanged(object sender, EventArgs e)
         {
+            
             try
             {
                 UserWeight = double.Parse(txtWeight.Text);
-               
-                
+
+
 
             }
             catch
@@ -149,12 +190,14 @@ namespace Assignment4BMI
 
         private void txtHeight_TextChanged(object sender, EventArgs e)
         {
+//            txtObese.BackColor = Color.White;
+//            txtObese.ForeColor = Color.Black;
 
             try
             {
 
                 UserHeight = double.Parse(txtHeight.Text);
-                if (txtWeight.Text.Length>1)
+                if (txtWeight.Text.Length > 1)
                 {
                     BtnCalculateBMI.Enabled = true;
                 }
