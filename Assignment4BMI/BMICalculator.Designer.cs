@@ -35,7 +35,6 @@
             this.lblHeightUnit = new System.Windows.Forms.Label();
             this.lblWeightUnit = new System.Windows.Forms.Label();
             this.txtWeight = new System.Windows.Forms.TextBox();
-            this.txtHeight = new System.Windows.Forms.TextBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -43,8 +42,9 @@
             this.txtResult = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.rdBtnImperial = new System.Windows.Forms.RadioButton();
             this.rdBtnMetric = new System.Windows.Forms.RadioButton();
+            this.rdBtnImperial = new System.Windows.Forms.RadioButton();
+            this.txtHeight = new System.Windows.Forms.TextBox();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -89,7 +89,7 @@
             this.BtnCalculateBMI.Location = new System.Drawing.Point(3, 188);
             this.BtnCalculateBMI.Name = "BtnCalculateBMI";
             this.BtnCalculateBMI.Size = new System.Drawing.Size(305, 36);
-            this.BtnCalculateBMI.TabIndex = 1;
+            this.BtnCalculateBMI.TabIndex = 5;
             this.BtnCalculateBMI.Text = "Calculate";
             this.BtnCalculateBMI.UseVisualStyleBackColor = false;
             this.BtnCalculateBMI.Click += new System.EventHandler(this.BtnCalculateBMI_Click);
@@ -124,24 +124,15 @@
             // 
             // txtWeight
             // 
+            this.txtWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWeight.Location = new System.Drawing.Point(131, 39);
             this.txtWeight.Name = "txtWeight";
             this.txtWeight.Size = new System.Drawing.Size(120, 29);
-            this.txtWeight.TabIndex = 9;
+            this.txtWeight.TabIndex = 3;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
-            // 
-            // txtHeight
-            // 
-            this.txtHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.Location = new System.Drawing.Point(131, 67);
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(120, 29);
-            this.txtHeight.TabIndex = 9;
-            this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
             // panelTitle
             // 
@@ -226,15 +217,15 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 51F));
             this.tableLayoutPanel2.Controls.Add(this.rdBtnMetric, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.txtHeight, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.lblHeightUnit, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.rdBtnImperial, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.lblHeight, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtWeight, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblWeight, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblWeightUnit, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.txtHeight, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 76);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -244,23 +235,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(305, 106);
             this.tableLayoutPanel2.TabIndex = 10;
-            // 
-            // rdBtnImperial
-            // 
-            this.rdBtnImperial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdBtnImperial.AutoSize = true;
-            this.rdBtnImperial.Checked = true;
-            this.rdBtnImperial.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtnImperial.Location = new System.Drawing.Point(158, 3);
-            this.rdBtnImperial.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.rdBtnImperial.Name = "rdBtnImperial";
-            this.rdBtnImperial.Size = new System.Drawing.Size(91, 30);
-            this.rdBtnImperial.TabIndex = 1;
-            this.rdBtnImperial.TabStop = true;
-            this.rdBtnImperial.Text = "Imperial";
-            this.rdBtnImperial.UseVisualStyleBackColor = true;
-            this.rdBtnImperial.CheckedChanged += new System.EventHandler(this.rdBtnImperial_CheckedChanged);
             // 
             // rdBtnMetric
             // 
@@ -276,6 +250,35 @@
             this.rdBtnMetric.Text = "Metric";
             this.rdBtnMetric.UseVisualStyleBackColor = true;
             this.rdBtnMetric.CheckedChanged += new System.EventHandler(this.rdBtnMetric_CheckedChanged);
+            // 
+            // rdBtnImperial
+            // 
+            this.rdBtnImperial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdBtnImperial.AutoSize = true;
+            this.rdBtnImperial.Checked = true;
+            this.rdBtnImperial.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnImperial.Location = new System.Drawing.Point(158, 3);
+            this.rdBtnImperial.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.rdBtnImperial.Name = "rdBtnImperial";
+            this.rdBtnImperial.Size = new System.Drawing.Size(91, 30);
+            this.rdBtnImperial.TabIndex = 2;
+            this.rdBtnImperial.TabStop = true;
+            this.rdBtnImperial.Text = "Imperial";
+            this.rdBtnImperial.UseVisualStyleBackColor = true;
+            this.rdBtnImperial.CheckedChanged += new System.EventHandler(this.rdBtnImperial_CheckedChanged);
+            // 
+            // txtHeight
+            // 
+            this.txtHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeight.Location = new System.Drawing.Point(131, 67);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(120, 29);
+            this.txtHeight.TabIndex = 6;
+            this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
             // BMICalculator
             // 
@@ -312,7 +315,6 @@
         private System.Windows.Forms.Label lblHeightUnit;
         private System.Windows.Forms.Label lblWeightUnit;
         private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitle;
@@ -322,6 +324,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.RadioButton rdBtnMetric;
         private System.Windows.Forms.RadioButton rdBtnImperial;
+        private System.Windows.Forms.TextBox txtHeight;
     }
 }
 

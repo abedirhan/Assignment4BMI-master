@@ -8,7 +8,7 @@ namespace Assignment4BMI
         private int _weight;
         private int _height;
         private int _bmi;
-        public int Weight { get; set; }
+        public int UserWeight { get; set; }
         public int UserHeight { get; set; }
         public int BMI { get; set; }
 
@@ -16,19 +16,19 @@ namespace Assignment4BMI
         public BMICalculator()
         {
             InitializeComponent();
-            Weight = _weight;
+            UserWeight = _weight;
             UserHeight = _height;
             BMI = _bmi;
         }
 
         public int BMICalculatorMetric(int weight, int height)
         {
-            BMI = Weight / (height * height);
+            BMI = weight / (height * height);
             return BMI;
         }
         public int BMICalculatorImperial(int weight, int height)
         {
-            BMI = Weight * 703 / (height * height);
+            BMI = weight * 703 / (height * height);
             return BMI;
 
         }
@@ -36,8 +36,10 @@ namespace Assignment4BMI
         {
             txtHeight.Clear();
             txtWeight.Clear();
-
+            rdBtnImperial.Checked = false;
+            rdBtnMetric.Checked = false;
             txtResult.Clear();
+            txtWeight.Focus();
 
         }
 
@@ -75,15 +77,15 @@ namespace Assignment4BMI
 
             if (rdBtnImperial.Checked)
             {
-                var a = BMICalculatorImperial(Weight, Height);
-                txtResult.Text = Convert.ToString(a);
+                
+                txtResult.Text = Convert.ToString(BMICalculatorImperial(UserWeight, Height));
             }
 
             if (rdBtnMetric.Checked)
             {
-                var a = BMICalculatorMetric(Weight, Height);
-                txtResult.Text = Convert.ToString(a);
+                txtResult.Text = Convert.ToString(BMICalculatorImperial(UserWeight, Height));
             }
+            Clean();
 
         }
 
@@ -91,7 +93,7 @@ namespace Assignment4BMI
         {
             try
             {
-                Weight = int.Parse(txtWeight.Text);
+                UserWeight = int.Parse(txtWeight.Text);
                
                 BtnCalculateBMI.Enabled = true;
             }
@@ -105,17 +107,17 @@ namespace Assignment4BMI
 
         private void txtHeight_TextChanged(object sender, EventArgs e)
         {
+            
             try
             {
                 
-                Height = int.Parse(txtHeight.Text);
+                UserHeight = int.Parse(txtHeight.Text);
                 BtnCalculateBMI.Enabled = true;
             }
             catch
             {
                 BtnCalculateBMI.Enabled = false;
             }
-
         }
     }
 }
