@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Assignment4BMI
@@ -8,17 +9,41 @@ namespace Assignment4BMI
         private int _weight;
         private int _height;
         private int _bmi;
-        public int UserWeight { get; set; }
-        public int UserHeight { get; set; }
+
+        public int UserWeight
+        {
+            get { return _weight; }
+            set
+            {
+                _weight = value;
+                if (value<1)
+                {
+                    MessageBox.Show("Weight can not be less then 1");
+                }
+            }
+        }
+
+        public int UserHeight
+        {
+            get { return _height; }
+            set
+            {
+                _weight = value;
+                if (value < 1)
+                {
+                    MessageBox.Show("Height can not be less then 1");
+                }
+            }
+        }
         public int BMI { get; set; }
 
 
         public BMICalculator()
         {
             InitializeComponent();
-            UserWeight = _weight;
-            UserHeight = _height;
-            BMI = _bmi;
+//            UserWeight = _weight;
+//            UserHeight = _height;
+//            BMI = _bmi;
         }
 
         public int BMICalculatorMetric(int weight, int height)
@@ -36,8 +61,8 @@ namespace Assignment4BMI
         {
             txtHeight.Clear();
             txtWeight.Clear();
-            rdBtnImperial.Checked = false;
-            rdBtnMetric.Checked = false;
+//            rdBtnImperial.Checked = false;
+//            rdBtnMetric.Checked = false;
             txtResult.Clear();
             txtWeight.Focus();
 
@@ -46,7 +71,7 @@ namespace Assignment4BMI
         private void BMICalculator_Load(object sender, EventArgs e)
         {
 
-           BtnCalculateBMI.Enabled = false;
+            BtnCalculateBMI.Enabled = false;
 
         }
 
@@ -73,17 +98,17 @@ namespace Assignment4BMI
 
         private void BtnCalculateBMI_Click(object sender, EventArgs e)
         {
-           
+
 
             if (rdBtnImperial.Checked)
             {
-                
+
                 txtResult.Text = Convert.ToString(BMICalculatorImperial(UserWeight, Height));
             }
 
             if (rdBtnMetric.Checked)
             {
-                txtResult.Text = Convert.ToString(BMICalculatorImperial(UserWeight, Height));
+                txtResult.Text = Convert.ToString(BMICalculatorMetric(UserWeight, Height));
             }
             Clean();
 
@@ -95,11 +120,12 @@ namespace Assignment4BMI
             {
                 UserWeight = int.Parse(txtWeight.Text);
                
-                BtnCalculateBMI.Enabled = true;
+                
+
             }
             catch
             {
-                 BtnCalculateBMI.Enabled = false;
+                BtnCalculateBMI.Enabled = false;
             }
 
 
@@ -107,12 +133,15 @@ namespace Assignment4BMI
 
         private void txtHeight_TextChanged(object sender, EventArgs e)
         {
-            
+
             try
             {
-                
+
                 UserHeight = int.Parse(txtHeight.Text);
-                BtnCalculateBMI.Enabled = true;
+                if (txtWeight.Text.Length>1)
+                {
+                    BtnCalculateBMI.Enabled = true;
+                }
             }
             catch
             {

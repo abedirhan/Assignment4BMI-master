@@ -58,10 +58,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeight.AutoSize = true;
             this.lblHeight.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeight.Location = new System.Drawing.Point(5, 64);
+            this.lblHeight.Location = new System.Drawing.Point(5, 71);
             this.lblHeight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(118, 42);
+            this.lblHeight.Size = new System.Drawing.Size(118, 35);
             this.lblHeight.TabIndex = 2;
             this.lblHeight.Text = "My Height:";
             this.lblHeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -73,10 +73,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Location = new System.Drawing.Point(5, 36);
+            this.lblWeight.Location = new System.Drawing.Point(5, 33);
             this.lblWeight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(118, 28);
+            this.lblWeight.Size = new System.Drawing.Size(118, 38);
             this.lblWeight.TabIndex = 2;
             this.lblWeight.Text = "My Weight:";
             this.lblWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -85,7 +85,7 @@
             // 
             this.BtnCalculateBMI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
             this.BtnCalculateBMI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BtnCalculateBMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalculateBMI.Font = new System.Drawing.Font("Corbel", 16F);
             this.BtnCalculateBMI.Location = new System.Drawing.Point(3, 188);
             this.BtnCalculateBMI.Name = "BtnCalculateBMI";
             this.BtnCalculateBMI.Size = new System.Drawing.Size(305, 36);
@@ -101,9 +101,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeightUnit.AutoSize = true;
             this.lblHeightUnit.Font = new System.Drawing.Font("Corbel", 14F);
-            this.lblHeightUnit.Location = new System.Drawing.Point(257, 64);
+            this.lblHeightUnit.Location = new System.Drawing.Point(257, 71);
             this.lblHeightUnit.Name = "lblHeightUnit";
-            this.lblHeightUnit.Size = new System.Drawing.Size(45, 42);
+            this.lblHeightUnit.Size = new System.Drawing.Size(45, 35);
             this.lblHeightUnit.TabIndex = 5;
             this.lblHeightUnit.Text = "--";
             this.lblHeightUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -115,9 +115,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWeightUnit.AutoSize = true;
             this.lblWeightUnit.Font = new System.Drawing.Font("Corbel", 14F);
-            this.lblWeightUnit.Location = new System.Drawing.Point(257, 36);
+            this.lblWeightUnit.Location = new System.Drawing.Point(257, 33);
             this.lblWeightUnit.Name = "lblWeightUnit";
-            this.lblWeightUnit.Size = new System.Drawing.Size(45, 28);
+            this.lblWeightUnit.Size = new System.Drawing.Size(45, 38);
             this.lblWeightUnit.TabIndex = 5;
             this.lblWeightUnit.Text = "--";
             this.lblWeightUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -127,10 +127,10 @@
             this.txtWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.Location = new System.Drawing.Point(131, 39);
+            this.txtWeight.Font = new System.Drawing.Font("Corbel", 14F);
+            this.txtWeight.Location = new System.Drawing.Point(131, 36);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(120, 29);
+            this.txtWeight.Size = new System.Drawing.Size(120, 30);
             this.txtWeight.TabIndex = 3;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             // 
@@ -172,10 +172,10 @@
             // 
             this.lblResultList.AutoSize = true;
             this.lblResultList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lblResultList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultList.Font = new System.Drawing.Font("Corbel", 16F);
             this.lblResultList.Location = new System.Drawing.Point(3, 271);
             this.lblResultList.Name = "lblResultList";
-            this.lblResultList.Size = new System.Drawing.Size(305, 24);
+            this.lblResultList.Size = new System.Drawing.Size(305, 27);
             this.lblResultList.TabIndex = 7;
             this.lblResultList.Text = "Previous Results:";
             this.lblResultList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,9 +230,9 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 76);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 3;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.93221F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.06779F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 46.77419F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.22581F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(305, 106);
             this.tableLayoutPanel2.TabIndex = 10;
             // 
@@ -245,7 +245,7 @@
             this.rdBtnMetric.Location = new System.Drawing.Point(45, 3);
             this.rdBtnMetric.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdBtnMetric.Name = "rdBtnMetric";
-            this.rdBtnMetric.Size = new System.Drawing.Size(78, 30);
+            this.rdBtnMetric.Size = new System.Drawing.Size(78, 27);
             this.rdBtnMetric.TabIndex = 1;
             this.rdBtnMetric.Text = "Metric";
             this.rdBtnMetric.UseVisualStyleBackColor = true;
@@ -261,7 +261,7 @@
             this.rdBtnImperial.Location = new System.Drawing.Point(158, 3);
             this.rdBtnImperial.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdBtnImperial.Name = "rdBtnImperial";
-            this.rdBtnImperial.Size = new System.Drawing.Size(91, 30);
+            this.rdBtnImperial.Size = new System.Drawing.Size(91, 27);
             this.rdBtnImperial.TabIndex = 2;
             this.rdBtnImperial.TabStop = true;
             this.rdBtnImperial.Text = "Imperial";
@@ -273,10 +273,10 @@
             this.txtHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.Location = new System.Drawing.Point(131, 67);
+            this.txtHeight.Font = new System.Drawing.Font("Corbel", 14F);
+            this.txtHeight.Location = new System.Drawing.Point(131, 74);
             this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(120, 29);
+            this.txtHeight.Size = new System.Drawing.Size(120, 30);
             this.txtHeight.TabIndex = 6;
             this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
