@@ -29,39 +29,27 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculator));
-            this.rdBtnMetric = new System.Windows.Forms.RadioButton();
             this.lblHeight = new System.Windows.Forms.Label();
-            this.rdBtnImperial = new System.Windows.Forms.RadioButton();
             this.lblWeight = new System.Windows.Forms.Label();
-            this.txtWeight = new System.Windows.Forms.TextBox();
-            this.txtHeight = new System.Windows.Forms.TextBox();
             this.BtnCalculateBMI = new System.Windows.Forms.Button();
-            this.txtResult = new System.Windows.Forms.TextBox();
             this.lblHeightUnit = new System.Windows.Forms.Label();
             this.lblWeightUnit = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.lblResultList = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
+            this.txtWeight = new System.Windows.Forms.TextBox();
+            this.txtHeight = new System.Windows.Forms.TextBox();
+            this.panelTitle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.lblResultList = new System.Windows.Forms.Label();
+            this.txtResult = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.rdBtnImperial = new System.Windows.Forms.RadioButton();
+            this.rdBtnMetric = new System.Windows.Forms.RadioButton();
+            this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rdBtnMetric
-            // 
-            this.rdBtnMetric.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdBtnMetric.AutoSize = true;
-            this.rdBtnMetric.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtnMetric.Location = new System.Drawing.Point(145, 161);
-            this.rdBtnMetric.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.rdBtnMetric.Name = "rdBtnMetric";
-            this.rdBtnMetric.Size = new System.Drawing.Size(104, 37);
-            this.rdBtnMetric.TabIndex = 1;
-            this.rdBtnMetric.Text = "Metric";
-            this.rdBtnMetric.UseVisualStyleBackColor = true;
             // 
             // lblHeight
             // 
@@ -69,31 +57,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeight.AutoSize = true;
-            this.lblHeight.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeight.Location = new System.Drawing.Point(13, 282);
+            this.lblHeight.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeight.Location = new System.Drawing.Point(5, 64);
             this.lblHeight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblHeight.Name = "lblHeight";
-            this.lblHeight.Size = new System.Drawing.Size(136, 33);
+            this.lblHeight.Size = new System.Drawing.Size(118, 42);
             this.lblHeight.TabIndex = 2;
             this.lblHeight.Text = "My Height:";
             this.lblHeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rdBtnImperial
-            // 
-            this.rdBtnImperial.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rdBtnImperial.AutoSize = true;
-            this.rdBtnImperial.Checked = true;
-            this.rdBtnImperial.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdBtnImperial.Location = new System.Drawing.Point(284, 161);
-            this.rdBtnImperial.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.rdBtnImperial.Name = "rdBtnImperial";
-            this.rdBtnImperial.Size = new System.Drawing.Size(123, 37);
-            this.rdBtnImperial.TabIndex = 1;
-            this.rdBtnImperial.TabStop = true;
-            this.rdBtnImperial.Text = "Imperial";
-            this.rdBtnImperial.UseVisualStyleBackColor = true;
             // 
             // lblWeight
             // 
@@ -101,98 +72,97 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWeight.AutoSize = true;
-            this.lblWeight.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWeight.Location = new System.Drawing.Point(9, 220);
+            this.lblWeight.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWeight.Location = new System.Drawing.Point(5, 36);
             this.lblWeight.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblWeight.Name = "lblWeight";
-            this.lblWeight.Size = new System.Drawing.Size(140, 33);
+            this.lblWeight.Size = new System.Drawing.Size(118, 28);
             this.lblWeight.TabIndex = 2;
             this.lblWeight.Text = "My Weight:";
             this.lblWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtWeight
-            // 
-            this.txtWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtWeight.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtWeight.Location = new System.Drawing.Point(144, 213);
-            this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(215, 40);
-            this.txtWeight.TabIndex = 3;
-            // 
-            // txtHeight
-            // 
-            this.txtHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtHeight.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHeight.Location = new System.Drawing.Point(144, 275);
-            this.txtHeight.Name = "txtHeight";
-            this.txtHeight.Size = new System.Drawing.Size(215, 40);
-            this.txtHeight.TabIndex = 4;
-            // 
             // BtnCalculateBMI
             // 
             this.BtnCalculateBMI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(69)))), ((int)(((byte)(69)))));
-            this.BtnCalculateBMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCalculateBMI.Location = new System.Drawing.Point(150, 321);
+            this.BtnCalculateBMI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BtnCalculateBMI.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalculateBMI.Location = new System.Drawing.Point(3, 188);
             this.BtnCalculateBMI.Name = "BtnCalculateBMI";
-            this.BtnCalculateBMI.Size = new System.Drawing.Size(163, 38);
+            this.BtnCalculateBMI.Size = new System.Drawing.Size(305, 36);
             this.BtnCalculateBMI.TabIndex = 1;
             this.BtnCalculateBMI.Text = "Calculate";
             this.BtnCalculateBMI.UseVisualStyleBackColor = false;
-            // 
-            // txtResult
-            // 
-            this.txtResult.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtResult.Font = new System.Drawing.Font("Corbel", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtResult.Location = new System.Drawing.Point(13, 379);
-            this.txtResult.Name = "txtResult";
-            this.txtResult.Size = new System.Drawing.Size(443, 40);
-            this.txtResult.TabIndex = 4;
+            this.BtnCalculateBMI.Click += new System.EventHandler(this.BtnCalculateBMI_Click);
             // 
             // lblHeightUnit
             // 
+            this.lblHeightUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeightUnit.AutoSize = true;
-            this.lblHeightUnit.Location = new System.Drawing.Point(376, 281);
+            this.lblHeightUnit.Font = new System.Drawing.Font("Corbel", 14F);
+            this.lblHeightUnit.Location = new System.Drawing.Point(257, 64);
             this.lblHeightUnit.Name = "lblHeightUnit";
-            this.lblHeightUnit.Size = new System.Drawing.Size(86, 31);
+            this.lblHeightUnit.Size = new System.Drawing.Size(45, 42);
             this.lblHeightUnit.TabIndex = 5;
-            this.lblHeightUnit.Text = "label1";
+            this.lblHeightUnit.Text = "--";
+            this.lblHeightUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblWeightUnit
             // 
+            this.lblWeightUnit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblWeightUnit.AutoSize = true;
-            this.lblWeightUnit.Location = new System.Drawing.Point(376, 219);
+            this.lblWeightUnit.Font = new System.Drawing.Font("Corbel", 14F);
+            this.lblWeightUnit.Location = new System.Drawing.Point(257, 36);
             this.lblWeightUnit.Name = "lblWeightUnit";
-            this.lblWeightUnit.Size = new System.Drawing.Size(86, 31);
+            this.lblWeightUnit.Size = new System.Drawing.Size(45, 28);
             this.lblWeightUnit.TabIndex = 5;
-            this.lblWeightUnit.Text = "label1";
+            this.lblWeightUnit.Text = "--";
+            this.lblWeightUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // richTextBox1
+            // txtWeight
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(14, 480);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(448, 90);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.txtWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtWeight.Location = new System.Drawing.Point(131, 39);
+            this.txtWeight.Name = "txtWeight";
+            this.txtWeight.Size = new System.Drawing.Size(120, 29);
+            this.txtWeight.TabIndex = 9;
+            this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
             // 
-            // lblResultList
+            // txtHeight
             // 
-            this.lblResultList.AutoSize = true;
-            this.lblResultList.Location = new System.Drawing.Point(15, 446);
-            this.lblResultList.Name = "lblResultList";
-            this.lblResultList.Size = new System.Drawing.Size(219, 31);
-            this.lblResultList.TabIndex = 7;
-            this.lblResultList.Text = "Previous Results";
+            this.txtHeight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtHeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHeight.Location = new System.Drawing.Point(131, 67);
+            this.txtHeight.Name = "txtHeight";
+            this.txtHeight.Size = new System.Drawing.Size(120, 29);
+            this.txtHeight.TabIndex = 9;
+            this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
             // 
-            // panel1
+            // panelTitle
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(24)))), ((int)(((byte)(27)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblTitle);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(469, 89);
-            this.panel1.TabIndex = 8;
+            this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(24)))), ((int)(((byte)(27)))));
+            this.panelTitle.Controls.Add(this.pictureBox1);
+            this.panelTitle.Controls.Add(this.lblTitle);
+            this.panelTitle.Location = new System.Drawing.Point(3, 3);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(305, 67);
+            this.panelTitle.TabIndex = 9;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(167, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(138, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // lblTitle
             // 
@@ -200,43 +170,120 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("GRACETIANS Cutting", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("GRACETIANS Cutting", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(-5, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(254, 40);
+            this.lblTitle.Size = new System.Drawing.Size(173, 27);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = " APP TECH";
             // 
-            // pictureBox1
+            // lblResultList
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(266, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 89);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lblResultList.AutoSize = true;
+            this.lblResultList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblResultList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultList.Location = new System.Drawing.Point(3, 271);
+            this.lblResultList.Name = "lblResultList";
+            this.lblResultList.Size = new System.Drawing.Size(305, 24);
+            this.lblResultList.TabIndex = 7;
+            this.lblResultList.Text = "Previous Results:";
+            this.lblResultList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtResult
+            // 
+            this.txtResult.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtResult.Enabled = false;
+            this.txtResult.Location = new System.Drawing.Point(3, 230);
+            this.txtResult.Name = "txtResult";
+            this.txtResult.Size = new System.Drawing.Size(305, 38);
+            this.txtResult.TabIndex = 9;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.BtnCalculateBMI, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lblResultList, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txtResult, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panelTitle, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(300, 427);
+            this.tableLayoutPanel1.TabIndex = 10;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 128F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 126F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.Controls.Add(this.rdBtnMetric, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.txtHeight, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lblHeightUnit, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.rdBtnImperial, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lblHeight, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txtWeight, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblWeight, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.lblWeightUnit, 2, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 76);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 3;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.93221F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 44.06779F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(305, 106);
+            this.tableLayoutPanel2.TabIndex = 10;
+            // 
+            // rdBtnImperial
+            // 
+            this.rdBtnImperial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdBtnImperial.AutoSize = true;
+            this.rdBtnImperial.Checked = true;
+            this.rdBtnImperial.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdBtnImperial.Location = new System.Drawing.Point(158, 3);
+            this.rdBtnImperial.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.rdBtnImperial.Name = "rdBtnImperial";
+            this.rdBtnImperial.Size = new System.Drawing.Size(91, 30);
+            this.rdBtnImperial.TabIndex = 1;
+            this.rdBtnImperial.TabStop = true;
+            this.rdBtnImperial.Text = "Imperial";
+            this.rdBtnImperial.UseVisualStyleBackColor = true;
+            this.rdBtnImperial.CheckedChanged += new System.EventHandler(this.rdBtnImperial_CheckedChanged);
+            // 
+            // rdBtnMetric
+            // 
+            this.rdBtnMetric.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rdBtnMetric.AutoSize = true;
+            this.rdBtnMetric.Font = new System.Drawing.Font("Corbel", 14F);
+            this.rdBtnMetric.Location = new System.Drawing.Point(45, 3);
+            this.rdBtnMetric.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.rdBtnMetric.Name = "rdBtnMetric";
+            this.rdBtnMetric.Size = new System.Drawing.Size(78, 30);
+            this.rdBtnMetric.TabIndex = 1;
+            this.rdBtnMetric.Text = "Metric";
+            this.rdBtnMetric.UseVisualStyleBackColor = true;
+            this.rdBtnMetric.CheckedChanged += new System.EventHandler(this.rdBtnMetric_CheckedChanged);
             // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(123)))), ((int)(((byte)(167)))));
-            this.ClientSize = new System.Drawing.Size(469, 656);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblResultList);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.txtResult);
-            this.Controls.Add(this.txtHeight);
-            this.Controls.Add(this.txtWeight);
-            this.Controls.Add(this.rdBtnImperial);
-            this.Controls.Add(this.lblHeight);
-            this.Controls.Add(this.lblWeight);
-            this.Controls.Add(this.rdBtnMetric);
-            this.Controls.Add(this.BtnCalculateBMI);
-            this.Controls.Add(this.lblHeightUnit);
-            this.Controls.Add(this.lblWeightUnit);
+            this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -246,30 +293,35 @@
             this.Name = "BMICalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI CALCULATOR";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.BMICalculator_Load);
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.RadioButton rdBtnMetric;
-        private System.Windows.Forms.RadioButton rdBtnImperial;
         private System.Windows.Forms.Label lblHeight;
         private System.Windows.Forms.Label lblWeight;
-        private System.Windows.Forms.TextBox txtWeight;
-        private System.Windows.Forms.TextBox txtHeight;
         private System.Windows.Forms.Button BtnCalculateBMI;
-        private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.Label lblHeightUnit;
         private System.Windows.Forms.Label lblWeightUnit;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label lblResultList;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtWeight;
+        private System.Windows.Forms.TextBox txtHeight;
+        private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblResultList;
+        private System.Windows.Forms.TextBox txtResult;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.RadioButton rdBtnMetric;
+        private System.Windows.Forms.RadioButton rdBtnImperial;
     }
 }
 
