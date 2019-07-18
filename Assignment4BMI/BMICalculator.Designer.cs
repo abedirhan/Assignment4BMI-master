@@ -1,6 +1,6 @@
 ﻿namespace Assignment4BMI
 {
-    partial class BMICalculator
+    partial class BmiCalculator
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BMICalculator));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BmiCalculator));
             this.lblHeight = new System.Windows.Forms.Label();
             this.lblWeight = new System.Windows.Forms.Label();
             this.lblHeightUnit = new System.Windows.Forms.Label();
@@ -36,7 +36,6 @@
             this.txtWeight = new System.Windows.Forms.TextBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTitle = new System.Windows.Forms.Label();
             this.lblResultList = new System.Windows.Forms.Label();
             this.txtResult = new System.Windows.Forms.TextBox();
             this.rdBtnMetric = new System.Windows.Forms.RadioButton();
@@ -50,10 +49,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.BtnReset = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblHeight
@@ -127,8 +128,8 @@
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(24)))), ((int)(((byte)(27)))));
+            this.panelTitle.Controls.Add(this.pictureBox2);
             this.panelTitle.Controls.Add(this.pictureBox1);
-            this.panelTitle.Controls.Add(this.lblTitle);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelTitle.Location = new System.Drawing.Point(3, 3);
             this.panelTitle.Name = "panelTitle";
@@ -145,19 +146,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("GRACETIANS Cutting", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(-6, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(173, 27);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = " APP TECH";
             // 
             // lblResultList
             // 
@@ -356,7 +344,20 @@
             this.BtnReset.UseVisualStyleBackColor = false;
             this.BtnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
-            // BMICalculator
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(3, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(180, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
+            // BmiCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -369,17 +370,17 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.MaximizeBox = false;
-            this.Name = "BMICalculator";
+            this.Name = "BmiCalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI CALCULATOR";
             this.Load += new System.EventHandler(this.BMICalculator_Load);
             this.panelTitle.ResumeLayout(false);
-            this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -392,7 +393,6 @@
         private System.Windows.Forms.TextBox txtWeight;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblResultList;
         private System.Windows.Forms.TextBox txtResult;
         private System.Windows.Forms.RadioButton rdBtnMetric;
@@ -406,6 +406,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button BtnReset;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

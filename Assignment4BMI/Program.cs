@@ -16,7 +16,7 @@ namespace Assignment4BMI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BMICalculator());
+            Application.Run(new BmiCalculator());
         }
     }
 }
