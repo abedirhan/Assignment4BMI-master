@@ -17,16 +17,13 @@ namespace Assignment4BMI
             get { return _weight; }
             set
             {
-
                 if (value > 300 || value < 1)
                 {
                     MessageBox.Show(" You can enter value between 1 to-300 KG");
                     txtWeight.Clear();
-
                 }
                 else
                 {
-                    ;
                     _weight = value;
 
                 }
@@ -40,10 +37,11 @@ namespace Assignment4BMI
             get { return _height; }
             set
             {
-                if (value > 3)
+                if (value > 3 )
                 {
                     MessageBox.Show("Please enter number between 0.3-3 meter");
                     txtHeight.Clear();
+                    
                 }
                 else
                 {
@@ -190,7 +188,7 @@ namespace Assignment4BMI
         {
             try
             {
-                if (UserHeight != 0)
+                if (UserHeight != 0 )
                 {
                     if (rdBtnImperial.Checked)
                     {
@@ -209,7 +207,7 @@ namespace Assignment4BMI
                     if (BMI < 18.5)
                     {
                         txtUnderWeight.BackColor = Color.Crimson;
-                        txtHeight.ForeColor = Color.White;
+                        txtUnderWeight.ForeColor = Color.White;
                         // txtHeight.Font= FontStyle.Bold;
                     }
                     else if (BMI > 18.5 && BMI < 24.9)
@@ -231,6 +229,7 @@ namespace Assignment4BMI
                     }
 
                     BtnReset.Enabled = true;
+                    
 
                 }
             }
@@ -278,7 +277,7 @@ namespace Assignment4BMI
 
             {
                 UserHeight = double.Parse(txtHeight.Text);
-                if (txtHeight.Text.Length > 1 && txtWeight.Text.Length > 1)
+                if (txtHeight.Text.Length >1 && txtWeight.Text.Length > 1)
                 {
                     BtnCalculateBMI.Enabled = true;
 
@@ -301,24 +300,31 @@ namespace Assignment4BMI
 
             Clean();
         }
-
+        /// <summary>
+        /// Letter and multi decimal point fixed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            {
-                e.Handled = true;
-            }
+          TextBoxImputDecimalOnly(sender,e);
 
         }
-
+        /// <summary>
+        /// Letter and Multi decimal point fixed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBoxImputDecimalOnly(sender, e);
+        }
+        /// <summary>
+        /// Text box number , decimal validation
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void TextBoxImputDecimalOnly(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
                 (e.KeyChar != '.'))
