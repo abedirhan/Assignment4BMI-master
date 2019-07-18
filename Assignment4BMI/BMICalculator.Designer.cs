@@ -122,6 +122,7 @@
             this.txtWeight.Size = new System.Drawing.Size(113, 30);
             this.txtWeight.TabIndex = 3;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
+            this.txtWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtWeight_KeyPress);
             // 
             // panelTitle
             // 
@@ -152,7 +153,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("GRACETIANS Cutting", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(-12, 10);
+            this.lblTitle.Location = new System.Drawing.Point(-6, 10);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(173, 27);
             this.lblTitle.TabIndex = 0;
@@ -184,12 +185,14 @@
             this.rdBtnMetric.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rdBtnMetric.AutoSize = true;
+            this.rdBtnMetric.Checked = true;
             this.rdBtnMetric.Font = new System.Drawing.Font("Corbel", 14F);
             this.rdBtnMetric.Location = new System.Drawing.Point(55, 3);
             this.rdBtnMetric.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdBtnMetric.Name = "rdBtnMetric";
             this.rdBtnMetric.Size = new System.Drawing.Size(78, 29);
             this.rdBtnMetric.TabIndex = 1;
+            this.rdBtnMetric.TabStop = true;
             this.rdBtnMetric.Text = "Metric";
             this.rdBtnMetric.UseVisualStyleBackColor = true;
             this.rdBtnMetric.CheckedChanged += new System.EventHandler(this.rdBtnMetric_CheckedChanged);
@@ -199,14 +202,12 @@
             this.rdBtnImperial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rdBtnImperial.AutoSize = true;
-            this.rdBtnImperial.Checked = true;
             this.rdBtnImperial.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdBtnImperial.Location = new System.Drawing.Point(161, 3);
             this.rdBtnImperial.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.rdBtnImperial.Name = "rdBtnImperial";
             this.rdBtnImperial.Size = new System.Drawing.Size(91, 29);
             this.rdBtnImperial.TabIndex = 2;
-            this.rdBtnImperial.TabStop = true;
             this.rdBtnImperial.Text = "Imperial";
             this.rdBtnImperial.UseVisualStyleBackColor = true;
             this.rdBtnImperial.CheckedChanged += new System.EventHandler(this.rdBtnImperial_CheckedChanged);
@@ -219,6 +220,7 @@
             this.txtHeight.Size = new System.Drawing.Size(113, 30);
             this.txtHeight.TabIndex = 6;
             this.txtHeight.TextChanged += new System.EventHandler(this.txtHeight_TextChanged);
+            this.txtHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHeight_KeyPress);
             // 
             // txtUnderWeight
             // 

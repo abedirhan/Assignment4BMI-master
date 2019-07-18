@@ -17,9 +17,10 @@ namespace Assignment4BMI
             get { return _weight; }
             set
             {
-                if (value < 0)
+                
+                if (value > 300 )
                 {
-                    MessageBox.Show("Please Enter a number other than the negative number.");
+                    MessageBox.Show(" You can enter value between 1 to-300 KG");
                 }
                 else
                 {
@@ -35,9 +36,9 @@ namespace Assignment4BMI
             get { return _height; }
             set
             {
-                if (value < 0)
+                if (value >3)
                 {
-                    MessageBox.Show("Please Enter a number other than the negative number.");
+                    MessageBox.Show("Please enter number between 0.1-3 meter");
                 }
                 else
                 {
@@ -109,9 +110,23 @@ namespace Assignment4BMI
         /// <param name="e"></param>
         private void BMICalculator_Load(object sender, EventArgs e)
         {
+            this.KeyPreview = true;
+            
 
             BtnCalculateBMI.Enabled = false;
             BtnReset.Enabled = false;
+            if (rdBtnImperial.Checked)
+            {
+                lblHeightUnit.Text = "in";
+                lblWeightUnit.Text = "lb";
+
+            }
+            if (rdBtnMetric.Checked)
+            {
+                lblHeightUnit.Text = "m";
+                lblWeightUnit.Text = "kg";
+
+            }
 
         }
         /// <summary>
@@ -223,7 +238,7 @@ namespace Assignment4BMI
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void txtHeight_TextChanged(object sender, EventArgs e)
-        {
+        { 
             try
             {
 
@@ -247,6 +262,22 @@ namespace Assignment4BMI
         {
 
             Clean();
+        }
+
+        private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar)) return;
+            if (Char.IsControl(e.KeyChar)) return;
+            e.Handled = true;
+        }
+
+        private void txtHeight_KeyPress(object sender, KeyPressEventArgs e)
+        { 
+            if (e.KeyChar == '.'
+                && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
         }
     }
 }
