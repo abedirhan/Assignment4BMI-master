@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 namespace Assignment4BMI
@@ -51,7 +50,7 @@ namespace Assignment4BMI
                 }
             }
         }
-        public double BMI { get; set; }
+        public double Bmi { get; set; }
 
 
         public BmiCalculator()
@@ -65,10 +64,10 @@ namespace Assignment4BMI
         /// <param name="weight"></param>
         /// <param name="height"></param>
         /// <returns></returns>
-        public double BMICalculatorMetric(double weight, double height)
+        public double BmiCalculatorMetric(double weight, double height)
         {
-            BMI = weight / (height * height);
-            return BMI;
+            Bmi = weight / (height * height);
+            return Bmi;
         }
         /// <summary>
         /// Imperial calculation methods.
@@ -76,10 +75,10 @@ namespace Assignment4BMI
         /// <param name="weight"></param>
         /// <param name="height"></param>
         /// <returns></returns>
-        public double BMICalculatorImperial(double weight, double height)
+        public double BmiCalculatorImperial(double weight, double height)
         {
-            BMI = weight * 703 / (height * height);
-            return BMI;
+            Bmi = weight * 703 / (height * height);
+            return Bmi;
 
         }
         /// <summary>
@@ -131,7 +130,7 @@ namespace Assignment4BMI
         /// <param name="e"></param>
         private void BMICalculator_Load(object sender, EventArgs e)
         {
-            this.KeyPreview = true;
+            KeyPreview = true;
 
 
             BtnCalculateBMI.Enabled = false;
@@ -193,35 +192,35 @@ namespace Assignment4BMI
                     if (rdBtnImperial.Checked)
                     {
 
-                        BMI = BMICalculatorImperial(UserWeight, UserHeight);
+                        Bmi = BmiCalculatorImperial(UserWeight, UserHeight);
                         // BMI = UserWeight * 703 / (UserHeight * UserHeight);
-                        txtResult.Text = Convert.ToString($"{BMI:F2}");
+                        txtResult.Text = Convert.ToString($"{Bmi:F2}");
                     }
 
                     if (rdBtnMetric.Checked)
                     {
-                        BMI = BMICalculatorMetric(UserWeight, UserHeight);
+                        Bmi = BmiCalculatorMetric(UserWeight, UserHeight);
                         // BMI = UserWeight  / (UserHeight * UserHeight);
-                        txtResult.Text = Convert.ToString($"{BMI:F2}");
+                        txtResult.Text = Convert.ToString($"{Bmi:F2}");
                     }
-                    if (BMI < 18.5)
+                    if (Bmi < 18.5)
                     {
                         txtUnderWeight.BackColor = Color.Crimson;
                         txtUnderWeight.ForeColor = Color.White;
                         // txtHeight.Font= FontStyle.Bold;
                     }
-                    else if (BMI > 18.5 && BMI < 24.9)
+                    else if (Bmi > 18.5 && Bmi < 24.9)
                     {
                         txtNormalWeight.BackColor = Color.LimeGreen;
                         txtNormalWeight.ForeColor = Color.White;
                     }
-                    else if (BMI > 25 && BMI < 29.9)
+                    else if (Bmi > 25 && Bmi < 29.9)
                     {
                         TxtOwerWeight.BackColor = Color.Tomato;
                         TxtOwerWeight.ForeColor = Color.White;
 
                     }
-                    else if (BMI > 30)
+                    else if (Bmi > 30)
                     {
                         txtObese.BackColor = Color.Crimson;
                         txtObese.ForeColor = Color.White;
@@ -337,6 +336,11 @@ namespace Assignment4BMI
             {
                 e.Handled = true;
             }
+        }
+
+        private void BmiCalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

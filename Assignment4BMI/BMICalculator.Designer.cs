@@ -373,6 +373,7 @@
             this.Name = "BmiCalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI CALCULATOR";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BmiCalculator_FormClosing);
             this.Load += new System.EventHandler(this.BMICalculator_Load);
             this.panelTitle.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

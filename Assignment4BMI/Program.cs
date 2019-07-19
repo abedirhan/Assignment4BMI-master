@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Assignment4BMI
 {
     static class Program
     {
+        public static Dictionary<FormEnum, Form> Forms;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +15,11 @@ namespace Assignment4BMI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BmiCalculator());
+            Forms = new Dictionary<FormEnum, Form>();
+            Forms.Add(FormEnum.START_FORM, new WelcomeForm());
+            Forms.Add(FormEnum.BMI_Form, new BmiCalculator());
+          
+            Application.Run(Forms[FormEnum.START_FORM]);
         }
     }
 }
