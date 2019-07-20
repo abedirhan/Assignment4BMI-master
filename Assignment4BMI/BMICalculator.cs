@@ -9,45 +9,80 @@ namespace Assignment4BMI
         private double _weight;
         private double _height;
         /// <summary>
-        /// User height get and set value with validation
+        /// User height get and set value with max min value validation
         /// </summary>
         public double UserWeight
         {
-            get { return _weight; }
+            get => _weight;
             set
             {
-                if (value > 300 || value < 1)
+                if (rdBtnImperial.Checked)
                 {
-                    MessageBox.Show(" You can enter value between 1 to-300 KG");
-                    txtWeight.Clear();
-                }
-                else
-                {
-                    _weight = value;
+                    if (value > 600 || value < 1)
+                    {
+                        MessageBox.Show(" Please enter between 1 to 600LB");
+                        txtWeight.Clear();
+                    }
+                    else
+                    {
+                        _weight = value;
 
+                    }
+                }
+                else if (rdBtnMetric.Checked)
+                {
+                    if (value > 300 || value < 1)
+                    {
+                        MessageBox.Show(" Please enter weight value between 1 to 300KG");
+                        txtWeight.Clear();
+                    }
+                    else
+                    {
+                        _weight = value;
+
+                    }
                 }
             }
         }
         /// <summary>
-        /// User height get and set value with validation
+        /// User height get and set value with max min value validation
         /// </summary>
         public double UserHeight
         {
-            get { return _height; }
+            get => _height;
             set
             {
-                if (value > 3 )
+                if (rdBtnImperial.Checked)
                 {
-                    MessageBox.Show("Please enter number between 0.3-3 meter");
-                    txtHeight.Clear();
-                    
-                }
-                else
-                {
-                    _height = value;
+                    if (value > 118)
+                    {
+                        MessageBox.Show("Please enter height value between 1 to 118 Inch ");
+                        txtHeight.Clear();
+
+                    }
+                    else
+                    {
+                        _height = value;
 
 
+                    }
                 }
+                else if (rdBtnMetric.Checked)
+                {
+                    if (value >3)
+                    {
+                        MessageBox.Show("Please enter number between valid height 0.1 to 3 meter.");
+                        txtHeight.Clear();
+
+                    }
+                    else
+                    {
+                        _height = value;
+
+
+                    }
+                }
+               
             }
         }
         public double Bmi { get; set; }
@@ -187,7 +222,7 @@ namespace Assignment4BMI
         {
             try
             {
-                if (UserHeight != 0 )
+                if (UserHeight != 0)
                 {
                     if (rdBtnImperial.Checked)
                     {
@@ -228,7 +263,7 @@ namespace Assignment4BMI
                     }
 
                     BtnReset.Enabled = true;
-                    
+
 
                 }
             }
@@ -276,7 +311,7 @@ namespace Assignment4BMI
 
             {
                 UserHeight = double.Parse(txtHeight.Text);
-                if (txtHeight.Text.Length >1 && txtWeight.Text.Length > 1)
+                if (txtHeight.Text.Length > 1 && txtWeight.Text.Length > 1)
                 {
                     BtnCalculateBMI.Enabled = true;
 
@@ -306,7 +341,7 @@ namespace Assignment4BMI
         /// <param name="e"></param>
         private void txtWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-          TextBoxImputDecimalOnly(sender,e);
+            TextBoxImputDecimalOnly(sender, e);
 
         }
         /// <summary>
